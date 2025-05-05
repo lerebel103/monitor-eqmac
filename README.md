@@ -1,4 +1,4 @@
-# Automatically restarts EqMac when it becomes unresponsive
+# Automatically restarts EqMac when it hangs
 
 A Python-based utility to monitor the `coreaudiod` process on macOS and restart the [`EqMac`](https://eqmac.app) application if the CPU usage exceeds a defined threshold.
 
