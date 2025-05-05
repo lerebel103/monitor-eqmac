@@ -38,7 +38,7 @@ As to why this happens, it seems to be a bug in the [`EqMac`](https://eqmac.app)
 
 3. Run the installation script as root:
    ```bash
-   sudo ./install.sh
+   sudo ./bin/install.sh
    ```
 
    This will:
@@ -49,8 +49,7 @@ As to why this happens, it seems to be a bug in the [`EqMac`](https://eqmac.app)
 
 The script runs automatically as a launch daemon after installation, but to manually start the script:
 ```bash
-source .venv/bin/activate
-python3 main.py
+sudo ./bin/monitor_eqmac.py
 ```
 
 ## Configuration
@@ -65,7 +64,7 @@ You can adjust the following fields in `main.py`:
 
 To remove the utility, run the uninstall script as root:
 ```bash
-sudo ./uninstall.sh
+sudo ./bin/uninstall.sh
 ```
 
 This will:

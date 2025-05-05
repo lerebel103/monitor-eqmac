@@ -7,13 +7,17 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+# Current directory
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd ${DIR}/..
+
 bin_dir=/usr/local/bin/monitor_eqmac
 
 # copy exec environment to /usr/local bin dir
 if [ ! -d $bin_dir ]; then
   mkdir $bin_dir | true
 fi
-cp -r .venv main.py monitor_eqmac.sh $bin_dir/
+cp -r .venv main.py ./bin/monitor_eqmac.sh $bin_dir/
 chmod +x $bin_dir/monitor_eqmac.sh
 chown -R root:wheel $bin_dir
 
